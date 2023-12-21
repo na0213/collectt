@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <meta charset="utf-8">
+   <meta name="robots" content="noindex,nofollow">
+   <title>HTMLベーステンプレート</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+   <header>
+      <h1 class="top-title">
+         <a href="top.html">COLLECTERS</a>
+      </h1>
+      <nav class="pc-nav">
+         <ul>
+            <li class="about"><a href="#">ABOUT</a></li>
+            <li class="collect"><a href="collect.html">COLLECT</a></li>
+            <li class="register"><a href="register.php">REGISTER</a></li>
+            <li class="login"><a href="login.php">LOGIN</a></li>
+         </ul>
+      </nav>
+      <nav class="sp-nav">
+         <ul>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="collect.html">COLLECT</a></li>
+            <li><a href="register.php">REGISTER</a></li>
+            <li><a href="login.php">LOGIN</a></li>
+            <li class="close"><span>閉じる</span></li>
+         </ul>
+      </nav>
+      <div id="hamburger">
+         <span></span>
+      </div>
+   </header>
+   <div class="main-visual">
+      <div class="circle-1">
+        <p>あつまれ<br>収集癖！</p>
+      </div>
+   </div>
+
+
+<!-- jquery が先！必須！必ず！ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jqueryを先に読み込んでから作成したものを読み込む -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    color: #734333;
+ }
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    letter-spacing : 0.2em;
+ }
+ header {
+    padding: 30px 4% 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+ }
+ h1 {
+    margin: 0; padding: 0;
+    font-size: 20px;
+ }
+ a {	
+    text-decoration: none;
+    color: #fff;
+ }
+ nav {
+    margin: 0 0 0 auto;
+ }
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+ li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+ }
+ .main-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 40px;
+    border-radius: 40% 40% 50% 40%/30% 40% 20% 30%;
+    background: url('../img/top.png') top center / cover no-repeat;
+ }
+ .circle-1 {
+   padding: 5%;
+   width: 250px;
+   height: 180px;
+   margin: 30px -15px;
+   /* mix-blend-mode: multiply; */
+   margin-right: 10px;
+   margin-left: auto;
+   font-weight: bold;
+   font-size: large;
+ }
+ .circle-1 {
+   background: rgba(255, 255, 255, .9);
+   border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+ }
+ h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
+ }
+ 
+ .sp-nav {
+    display: none;
+ }
+ .top-title {
+     background-color: #FFC4C8;
+     padding: 20px;
+ }
+ .about {
+     background-color: #FF5685;
+     padding: 20px;
+ }
+ .collect {
+     background-color: #FED154;
+     padding: 20px;
+ }
+ .register {
+     background-color: #FEB25E;
+     padding: 20px;
+ }
+ .login {
+     background-color: #6AC7E6;
+     padding: 20px;
+ }
+ 
+ @media screen and (max-width: 640px) {
+    .pc-nav {
+       display: none;
+    }
+    .sp-nav {
+       z-index: 1;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100vh;
+       display: block;
+       width: 100%;
+       background: rgba(0, 0, 0, .8);
+       opacity: 0;
+       transform: translateY(-100%);
+       transition: all .2s ease-in-out;
+    }
+    #hamburger {
+       position: relative;
+       display: block;
+       width: 30px;
+       height: 25px;
+       margin: 0 0 0 auto;
+    }
+    #hamburger span {
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+       transform: translateY(-50%);
+    }
+    #hamburger::before {
+       content: '';
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+    }
+    #hamburger::after {
+       content: '';
+       display: block;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 70%;
+       height: 2px;
+       background-color: #fff;
+    }
+    /*スマホメニュー*/
+    .sp-nav ul {
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+    }
+    .sp-nav li {
+       margin: 0;
+       padding: 0;
+    }
+    .sp-nav li span {
+       font-size: 15px;
+       color: #fff;
+    }
+    .sp-nav li a, .sp-nav li span {
+       display: block;
+       padding: 20px 0;
+    }
+    /*-閉じるアイコンー*/
+    .sp-nav .close {
+ 
+       position: relative;
+       padding-left: 20px;
+    }
+    .sp-nav .close::before {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 16px;
+       height: 1px;
+       background: #fff;
+       transform: rotate( 45deg );
+    }
+    .sp-nav .close::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 16px;
+       height: 1px;
+       background: #fff;
+       transform: rotate( -45deg );
+    }
+    .toggle {
+       transform: translateY( 0 );
+       opacity: 1;
+    }
+    .main-visual {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       /* padding: 0 4%; */
+       background: url('../img/top.png') top center / cover no-repeat;
+       width: 50%;
+       /* height: auto; */
+       border-radius: 0;
+    }
+    h2 {
+       line-height: 1.6;
+       text-align: center;
+    }
+ }

@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+    color: #734333;
+ }
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    letter-spacing : 0.2em;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-bottom: 100px;
+ }
+ header {
+    padding: 30px 4% 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+ }
+ h1 {
+    margin: 0; padding: 0;
+    font-size: 20px;
+ }
+ h2 {
+   text-align: center;
+   font-size: 30px;
+   margin-top: 100px;
+ }
+ a {	
+    text-decoration: none;
+    color: #fff;
+ }
+ nav {
+    margin: 0 0 0 auto;
+ }
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+ li {
+    margin: 0 0 0 15px;
+    font-size: 14px;
+ }
+
+ h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
+ }
+ 
+ .sp-nav {
+    display: none;
+ }
+ .top-title {
+     background-color: #FFC4C8;
+     padding: 20px;
+ }
+ .about {
+     background-color: #FF5685;
+     padding: 20px;
+ }
+ .collect {
+     background-color: #febd08;
+     padding: 20px;
+ }
+ .register {
+     background-color: #FED154;
+     padding: 20px;
+ }
+ .login {
+     background-color: #28aedb;
+     padding: 20px;
+     margin-top: -10px;
+     margin-bottom: 10px;
+ }
+
+ .toptitle {
+   margin-top: 100px;
+   margin-left: 10px;
+ }
+ .mybook {
+   padding: 20px;
+   font-size: 30px;
+ }
+ .new_book {
+   padding: 20px;
+ }
+ .newbook {
+   padding-top: 20px;
+   color: #734333;
+ }
+ .mm {
+   font-size: 50px;
+   font-weight: bold;
+}
+.bb {
+   font-size: 50px;
+   font-weight: bold;
+   color: #febd08;
+}
+ .l-inner {
+   margin-top: 200px;
+   max-width: calc(1120px + 20px * 2);
+   width: 100%;
+   margin-inline: auto;
+   padding: 0 20px;
+ }
+ 
+ .c-cards {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 50px 20px;
+   margin-top: 30px;
+ }
+ 
+ .c-card {
+   display: flex;
+   flex-direction: column;
+   /* filter: drop-shadow(-6px 5px 10px #000); */
+   box-shadow: 3px 3px 10px #000;
+   overflow: hidden;
+   border-radius: 10px 10px 10px 10px;
+   width: calc((100% - 40px) / 3);
+ }
+ 
+ .c-card__body {
+   display: flex;
+   flex-direction: column;
+   padding: 24px 32px;
+   background-color: #ffffff;
+   /* 親の.c-cardの余白をbodyに割り当て高さを揃える*/
+   /* flex-grow: 1; */
+   height: 100%;
+ }
+ 
+ .c-card__img img {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 360 / 240;
+   object-fit: cover;
+ }
+ 
+ .c-card__text {
+   font-size: 14px;
+   font-weight: 500;
+   line-height: calc(20 / 14);
+   letter-spacing: 0;
+   color: #333333;
+   /* 親の.c-card__bodyの余白を割り当てる事で、テキストが増えても他のカードと高さを揃える事が出来る */
+   /* flex-grow: 1; */
+   margin-bottom: 15px;
+ }
+ .c-card__time {
+   display: inline-block;
+   font-size: 14px;
+   font-weight: bold;
+   line-height: 1;
+   letter-spacing: 0.1em;
+   color: #888888;
+   /* margin-top: 15px; */
+   margin-top: auto;
+ }
+ 
+ /* hover時にカードが上に上がる
+ ===================================================*/
+ .c-card--hoverUp {
+   transition: transform 0.3s ease;
+ }
+ .c-card--hoverUp:hover,
+ .c-card--hoverUp:focus-visible {
+   transform: translateY(-30px);
+ }
+ 
+ /* 矢印 のあるカード、 hover時 矢印が右に動く
+ ===================================================*/
+ .c-card__arrow {
+   display: flex;
+   justify-content: space-between;
+ }
+ .c-card__arrow::after {
+   content: "";
+   background: url("https://ryo-sukeblog.net/wp-content/uploads/2023/01/index_arrow.svg") no-repeat center/ contain;
+   width: 60px;
+   height: 7px;
+   transition: transform 0.3s ease;
+ }
+ 
+ .c-card--hoverArrow:hover .c-card__arrow::after,
+ .c-card--hoverArrow:focus-visible .c-card__arrow::after {
+   transform: translateX(10px);
+ }
+ 
+ /* テキストに表示する行数指定する
+ ===================================================*/
+ .c-card__text--lineClamp {
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+   overflow: hidden;
+ }
+ 
+ /* cardをgrid ＆ テキストに行数指定する
+ ===================================================*/
+ .c-grid-cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 30px 20px;
+   margin-top: 30px;
+ }
+ 
+ .c-grid-cards .c-card {
+   width: 100%;
+ }
+ @media screen and (max-width: 640px) {
+    .pc-nav {
+       display: none;
+    }
+    .sp-nav {
+       z-index: 1;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100vh;
+       display: block;
+       width: 100%;
+       background: rgba(0, 0, 0, .8);
+       opacity: 0;
+       transform: translateY(-100%);
+       transition: all .2s ease-in-out;
+    }
+    #hamburger {
+       position: relative;
+       display: block;
+       width: 30px;
+       height: 25px;
+       margin: 0 0 0 auto;
+    }
+    #hamburger span {
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+       transform: translateY(-50%);
+    }
+    #hamburger::before {
+       content: '';
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background-color: #fff;
+    }
+    #hamburger::after {
+       content: '';
+       display: block;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       width: 70%;
+       height: 2px;
+       background-color: #fff;
+    }
+    /*スマホメニュー*/
+    .sp-nav ul {
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+    }
+    .sp-nav li {
+       margin: 0;
+       padding: 0;
+    }
+    .sp-nav li span {
+       font-size: 15px;
+       color: #fff;
+    }
+    .sp-nav li a, .sp-nav li span {
+       display: block;
+       padding: 20px 0;
+    }
+    /*-閉じるアイコンー*/
+    .sp-nav .close {
+ 
+       position: relative;
+       padding-left: 20px;
+    }
+    .sp-nav .close::before {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 16px;
+       height: 1px;
+       background: #fff;
+       transform: rotate( 45deg );
+    }
+    .sp-nav .close::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 0;
+       display: block;
+       width: 16px;
+       height: 1px;
+       background: #fff;
+       transform: rotate( -45deg );
+    }
+    .toggle {
+       transform: translateY( 0 );
+       opacity: 1;
+    }
+    .main-visual {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0 4%;
+       border-radius: 0;
+    }
+    h2 {
+       line-height: 1.6;
+       text-align: center;
+    }
+ }
